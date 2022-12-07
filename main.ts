@@ -14,8 +14,6 @@ function createWindow() {
 
   mainWindow.webContents.openDevTools();
 
-  mainWindow.loadFile("index.html");
-
   if (isDev) {
     mainWindow.loadURL("http://localhost:4000");
   } else {

@@ -4,13 +4,13 @@
   "description": "",
   "main": "./build/js/main/index.js",
   "scripts": {
-    "start:dev": "concurrently -p \"[{name}]\" -n \"main,render,electron\" -c \"#106309,#2593C1,#9AE6F7\" 'npm run build-main:dev' 'npm run start:render' 'npm run start:electron'",
+    "start:dev": "concurrently -p \"[{name}]\" -n \"main,render,electron\" -c \"#106309,#2593C1,#9AE6F7\" \"npm run build-main:dev\" \"npm run start:render\" \"npm run start:electron\"",
     "start:electron": "electron .",
-    "start:render": "webpack serve --config './webpack/webpack.render.js' --mode development",
-    "build-main:dev": "webpack --config './webpack/webpack.main.js' --mode development --watch",
-    "build-render:dev": "webpack --config './webpack/webpack.render.js' --mode development",
-    "build-main:prod": "webpack --config './webpack/webpack.main.js' --mode production",
-    "build-render:prod": "webpack --config './webpack/webpack.render.js' --mode production"
+    "start:render": "webpack serve --config webpack/webpack.render.js --mode development",
+    "build-main:dev": "webpack --config webpack/webpack.main.js --mode development --watch",
+    "build-render:dev": "webpack --config webpack/webpack.render.js --mode development",
+    "build-main:prod": "webpack --config webpack/webpack.main.js --mode production",
+    "build-render:prod": "webpack --config webpack/webpack.render.js --mode production"
   },
   "repository": {
     "type": "git",
